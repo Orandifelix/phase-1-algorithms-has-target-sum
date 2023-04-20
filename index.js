@@ -1,17 +1,51 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
-}
+  // Iterate over all possible pairs of indices
+    for (let i = 0; i < array.length - 1; i++) {
+      for (let j = i + 1; j < array.length; j++) {
+        // Retrieve the values at the two indices and add them together
+        let num1 = array[i];
+        let num2 = array[j];
+        let sum = num1 + num2;
+  
+        // Check if the sum is equal to the target number
+        if (sum === target) {
+          // If so, print the two numbers and return true
+          console.log(`Found a pair of numbers that add up to ${target}: ${num1} + ${num2} = ${sum}`);
+          return true;
+        }
+      }
+    }
+  
+    // If no pair was found, print a message and return false
+    console.log(`No pair of numbers found that add up to ${target}`);
+    return false;
+  }
+  
 
+    
 /* 
   Write the Big O time complexity of your function here
+  O(N^2)
 */
 
 /* 
   Add your pseudocode here
+  Sum = random number 1 from array + random number 2 from array 
+  sum === target sum
+  if true {
+    return true
+  }
+  else {
+    return false
+  }
 */
 
 /*
   Add written explanation of your solution here
+  Generate two random  numbers from the array and  add  them up.
+  The sum  of  the numbers should be equated to the target sum value.
+  return true if the solution was successfully or false if otherwise.
 */
 
 // You can run `node index.js` to view these console logs
