@@ -1,8 +1,9 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
   // Iterate over all possible pairs of indices
-    for (let i = 0; i < array.length - 1; i++) {
-      for (let j = i + 1; j < array.length; j++) {
+  const len = array.length
+    for (let i = 0; i < len - 1; i++) {
+      for (let j = i + 1; j < len; j++) {
         // Retrieve the values at the two indices and add them together
         let num1 = array[i];
         let num2 = array[j];
